@@ -89,7 +89,7 @@ object App
 
       val td = new TorahData();
       //td.loadDir("../data")
-      td.loadDir("../../../../data");
+      td.loadDir("data");
       generateNGram(td)
 
       println("Running Calculators...")
