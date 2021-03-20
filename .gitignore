@@ -1,3 +1,7 @@
+
+# Scala stuff
+*.class
+
 # Logs
 logs
 *.log
