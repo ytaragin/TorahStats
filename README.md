@@ -5,7 +5,7 @@ This project contains two parts:
 ## data
 Text files that contains the Torah with teamim as well
 ## Generate
-This is a Scala project that reads in teh data files and creates csv files that breakdown the frequency and patterns of the Teamim at the:  
+This is a Scala project that reads in teh data files and creates csv files that breakdown the frequency and patterns of the Teamim at various levels:  
 - Sefer
 - Parsha
 - Perek
@@ -13,10 +13,10 @@ This is a Scala project that reads in teh data files and creates csv files that 
 levels.
 ### Building
 Right now it is very straightforward so I haven't botheref to create a make file of any kind. So to build run:
-scalac com/yt/patterns/*.scala
+    scalac com/yt/patterns/*.scala
 
 To run, just execute
-scala com.yt.patterns.App
+    scala com.yt.patterns.App
 
 
 ## Upload
