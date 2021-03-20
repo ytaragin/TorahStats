@@ -9,7 +9,15 @@ This is a Scala project that reads in teh data files and creates csv files that 
 - Sefer
 - Parsha
 - Perek
-- Aliyah
+- Aliyah  
 levels.
+### Building
+Right now it is very straightforward so I haven't botheref to create a make file of any kind. So to build run:
+scalac com/yt/patterns/*.scala
+
+To run, just execute
+scala com.yt.patterns.App
+
+
 ## Upload
 This is a node project that uploads the genereated CSV files into an existing google spreadsheet for easier viewing and sharing
