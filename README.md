@@ -10,12 +10,12 @@ This is a Scala project that reads in teh data files and creates csv files that 
 - Parsha
 - Perek
 - Aliyah  
-levels.
+
 ### Building
-Right now it is very straightforward so I haven't botheref to create a make file of any kind. So to build run:
+Right now it is very straightforward so I haven't botheref to create a make file of any kind. So to build run:  
     scalac com/yt/patterns/*.scala
 
-To run, just execute
+To run, just execute:  
     scala com.yt.patterns.App
 
 
