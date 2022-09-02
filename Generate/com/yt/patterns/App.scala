@@ -12,7 +12,7 @@ import scala.collection.mutable.ArrayBuffer
 object App 
 {
 
-  def printToFile(f: java.io.File)(op: java.io.PrintWriter => Unit) {
+  def printToFile(f: java.io.File)(op: java.io.PrintWriter => Unit) = {
     val p = new java.io.PrintWriter(f)
     try { op(p) } finally { p.close() }
   }
@@ -51,9 +51,13 @@ object App
         allResults = res
       }
       else {
-        allResults = (allResults.toSeq ++ res.toSeq) //combine both maps
+        // allResults = (allResults.toSeq ++ res.toSeq) //combine both maps
+        //   .groupBy { case (id, vals) => id } // sort by keys
+        //   .mapValues(v => v.flatMap(v => v._2).toArray) // flatten new values to single array
+        var tempResults = (allResults.toSeq ++ res.toSeq) //combine both maps
           .groupBy { case (id, vals) => id } // sort by keys
-          .mapValues(v => v.flatMap(v => v._2).toArray) // flatten new values to single array
+
+        allResults = tempResults.mapValues(v => v.flatMap(v => v._2).toArray).toMap // flatten new values to single array
       }
     }
 
